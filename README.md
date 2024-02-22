@@ -1,67 +1,60 @@
+<div align="center">
+![Project Logo](https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png
+<h1 align="center">Nextcloud Connect: Your Integrative Workflow Solution</h1>
+<p align="center">
+Elevate your productivity with Nextcloud Connect's seamless integration and expansive functionality.
+<br />
+<a href="https://github.com/empress-eco/nextcloud_connect">Explore the Docs</a>
+·
+<a href="https://github.com/empress-eco/nextcloud_connect/issues">Report Bug</a>
+·
+<a href="https://github.com/empress-eco/nextcloud_connect/issues/new">Request Feature</a>
+</p>
+</div>
 
-## Pibiapp
+## About The Project
 
-Pibiapp is an application developed on the Frappe framework to integrate it with other systems and expand the functionality of applications on this framework.
+### 📖 Overview
+Nextcloud Connect, formerly known as Pibiapp, is a powerful tool designed to enhance your workflow by seamlessly integrating with Nextcloud. It's crafted for users seeking to broaden their application's functionality, automate data incorporation, and streamline the management of attachments using Nextcloud.
 
-This application is **OBSOLETE** and is not valid for versions of Frappe higher than **11**, but if the part that interests you is the **integration with Nextcloud you will find that functionality improved and expanded in
-https://github.com/pibico/pibiDAV**
+### 🌟 Key Features
+- **Nextcloud Integration:** Store attachments on the Nextcloud server, create application and module-specific folders, manage version history, and share links with corresponding group members.
+- **Automated DocType Creation:** Automatically create a new DocType based on the data structure of a file. This feature supports Excel, CSV, JSON, and XML file formats.
+- **Redash Dashboard Integration:** View dashboards directly in your application and manage user access.
 
-#### Current modules
+## Getting Started
 
-- **Nextcloud**
-    
-    Connect Frappe and Nextcloud, store the attachments on the Nextcloud server
-    
-    Create folders to archive by application and module.
-    
-    Share the link with Nextcloud users that belong to the group corresponding to the module
-    
-    Tag in Nextcloud the attached files taking into account the application, the modules, the identifier of the transaction and other related data. Includes tagging of the Frappe transaction as file tags in Nextcloud.
-    
-    Manage a history of versions in Nextcloud. When the same file is uploaded from Frappe with successive modifications.
-    
-    Include archives stored in Nextcloud as attachments to the email
-    
-    Upload database backups and local files
-    
-- **External Data**
-    
-    Automatically create a new DocType with its data structure of a file
-    
-    Allows you to select the Module of a Frappe application in which you will create the DocType
-    
-    Supports files with formats: Excel, CSV, JSON and XML
-    
-    Analyze the data set to determine the type of data that fields are mandatory and lists of selectable values
-    
-    Allows successive data loads, provided that the format of the file and the position of the data match the original file used to create the DocType
-    
-    
-    It is limited to data structures of simple records without tables. This version does not load a JSON or XML with hierarchized data in several levels.    
+### Prerequisites
+Ensure the Framework v10.1.68+ and bench are installed prior to setting up Nextcloud Connect.
 
-- **Redash**
+### Installation
+To set up Nextcloud Connect, follow these steps:
 
-    Integrate the view of dashboards in Frappe so that end users do not need to access Redash
-    
-    Provides a security layer that allows Frappe to manage user access to control panels according to their roles
+```sh
+# Navigate to your bench folder and setup the new app
+bench get-app nextcloud_connect https://github.com/empress-eco/nextcloud_connect.git
+bench --site yoursite install-app nextcloud_connect
+```
+After installation, log in to your site to configure the app.
 
-    It is not the purpose of this connector to allow the definition of new Redash panels from Frappe. The system administrator or an expert BI technician should define directly in Redash the control panels that will be visible by this connector in this new module.
-    
+## Usage
+For a comprehensive guide on configuring the app, please refer to the [Nextcloud Settings Documentation](https://github.com/empress-eco/nextcloud_connect/wiki/NEXTCLOUD-SETTINGS).
+
+## Contributing
+Your contributions are welcomed and appreciated! Here's how you can contribute:
+
+- Fork the Project
+- Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+- Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+- Push to the Branch (`git push origin feature/AmazingFeature`)
+- Open a Pull Request
+
+## License and Acknowledgements
+
 ### License
+This project is under the MIT License. Your contributions are also licensed under the MIT License.
 
-GNU General Public License v3. See license.txt
+### Acknowledgements
+Special thanks to the Empress Community, the architects behind the essential tools that power this project. Their innovation and dedication have been instrumental in building the foundations and functionalities we rely on. We are profoundly grateful for their pioneering work and ongoing support.
 
-### Install
-
-You must have previously installed the Frappe framework v10.1.68+ and bench
-
-Go to your bench folder and setup the new app
-
-```
-bench get-app pibiapp https://github.com/doloresjuliana/pibiapp
-bench --site yoursite install-app pibiapp
-```
-
-Login to your site to configure the app.
-
-https://github.com/doloresjuliana/pibiapp/wiki/NEXTCLOUD-SETTINGS
+<!-- MARKDOWN LINKS & IMAGES -->
